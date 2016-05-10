@@ -8,21 +8,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<h1>${error }</h1>
 	<form:form action="/login" method="POST" commandName="user">
 		<table>
 			<tr>
 				<td>User Name:</td>
 				<td><form:input path="username" /></td>
+				<td><form:errors path="username"> Invalid User Name.</form:errors></td>
 			</tr>
 
 			<tr>
 				<td>Password:</td>
 				<td><form:input path="password" /></td>
+				<td><form:errors path="password"> Invalid Password.</form:errors></td>
 			</tr>
 
 			<tr>
-				<td colspan="2"><form:button name="submit" /></td>
+				<td colspan="3"><form:button name="submit" value="Submit">Save</form:button></td>
 			</tr>
 
 		</table>

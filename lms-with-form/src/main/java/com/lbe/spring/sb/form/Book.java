@@ -1,10 +1,19 @@
 package com.lbe.spring.sb.form;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+
 public class Book {
 
+	@NotNull
 	private String title;
 	private String publisher;
+
+	@Max(value = 100)
 	private float price;
+
+	@Min(value = 1)
 	private int quantity;
 
 	public String getTitle() {
